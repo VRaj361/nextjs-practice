@@ -1,7 +1,10 @@
 import axios from 'axios'
 
+// initiate client connection of prisma and get information here only why we need to create api 
+// the code still works on server end only return code is goes on client end
+
 export default async function Todos() {
-    const response = await axios.get("https://jsonplaceholder.typicode.com/todos/1");
+    const response = await axios.get("http://localhost:3000/api/v1/users");
 
     const data = response.data;
     
