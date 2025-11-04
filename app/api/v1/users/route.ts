@@ -1,7 +1,11 @@
+import { getServerSession } from "next-auth";
 import { NextResponse } from "next/server";
 
-export function GET() {
+export async function GET() {
+    const session = await getServerSession()
+    console.log(session)
     return NextResponse.json({
+        session,
         name:'vrajpatel',
         email:'vraj@gmail.com',
         id: '1',
